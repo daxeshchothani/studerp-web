@@ -5,3 +5,8 @@ export { default as GradeManagementPage } from './GradeManagementPage';
 export { default as ParentPortalPage } from './ParentPortalPage';
 export { default as CourseManagementPage } from './CourseManagementPage';
 export { default as AnalyticsReportsPage } from './AnalyticsReportsPage';
+export { default as FacultyManagementPage } from './FacultyManagementPage';
+export { default as AdminDashboardPage } from './AdminDashboardPage';
+export { default as AdmissionSystemPage } from './AdmissionSystemPage';
+export { default as RealTimeChatPage } from './RealTimeChatPage';
+export { default as NotificationSystemPage } from './NotificationSystemPage';

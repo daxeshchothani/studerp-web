@@ -5,13 +5,13 @@ import SpotlightCard from '../components/SpotlightCard';
 import { FEATURES } from '../constants/features';
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const AnalyticsReportsPage = () => {
-  const feature = FEATURES.find(f => f.id === 'analytics-reports');
+const RealTimeChatPage = () => {
+  const feature = FEATURES.find(f => f.id === 'real-time-chat');
   
   usePageMeta(
     feature.title,
     feature.description,
-    'analytics, reports, education analytics, student performance, data insights'
+    'real-time chat, messaging system, websocket, student faculty communication, group chat'
   );
 
   return (
@@ -81,4 +81,4 @@ const AnalyticsReportsPage = () => {
   );
 };
 
-export default AnalyticsReportsPage;
+export default RealTimeChatPage;

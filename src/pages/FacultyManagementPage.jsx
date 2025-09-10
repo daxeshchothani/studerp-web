@@ -5,13 +5,13 @@ import SpotlightCard from '../components/SpotlightCard';
 import { FEATURES } from '../constants/features';
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const AnalyticsReportsPage = () => {
-  const feature = FEATURES.find(f => f.id === 'analytics-reports');
+const FacultyManagementPage = () => {
+  const feature = FEATURES.find(f => f.id === 'faculty-management');
   
   usePageMeta(
     feature.title,
     feature.description,
-    'analytics, reports, education analytics, student performance, data insights'
+    'faculty management, course management, grade upload, teaching management, education software'
   );
 
   return (
@@ -81,4 +81,4 @@ const AnalyticsReportsPage = () => {
   );
 };
 
-export default AnalyticsReportsPage;
+export default FacultyManagementPage;

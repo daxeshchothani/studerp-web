@@ -5,13 +5,13 @@ import SpotlightCard from '../components/SpotlightCard';
 import { FEATURES } from '../constants/features';
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const AnalyticsReportsPage = () => {
-  const feature = FEATURES.find(f => f.id === 'analytics-reports');
+const AdminDashboardPage = () => {
+  const feature = FEATURES.find(f => f.id === 'admin-dashboard');
   
   usePageMeta(
     feature.title,
     feature.description,
-    'analytics, reports, education analytics, student performance, data insights'
+    'admin dashboard, system administration, analytics, user management, reporting'
   );
 
   return (
@@ -81,4 +81,4 @@ const AnalyticsReportsPage = () => {
   );
 };
 
-export default AnalyticsReportsPage;
+export default AdminDashboardPage;

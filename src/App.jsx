@@ -9,6 +9,11 @@ import GradeManagementPage from './pages/GradeManagementPage';
 import ParentPortalPage from './pages/ParentPortalPage';
 import CourseManagementPage from './pages/CourseManagementPage';
 import AnalyticsReportsPage from './pages/AnalyticsReportsPage';
+import FacultyManagementPage from './pages/FacultyManagementPage';
+import AdminDashboardPage from './pages/AdminDashboardPage';
+import AdmissionSystemPage from './pages/AdmissionSystemPage';
+import RealTimeChatPage from './pages/RealTimeChatPage';
+import NotificationSystemPage from './pages/NotificationSystemPage';
 import ThemedPage from './components/ThemedPage';
 
 export default function App() {
@@ -30,6 +35,11 @@ export default function App() {
         <Route path="/parent-portal" element={<ParentPortalPage />} />
         <Route path="/course-management" element={<CourseManagementPage />} />
         <Route path="/analytics-reports" element={<AnalyticsReportsPage />} />
+        <Route path="/faculty-management" element={<FacultyManagementPage />} />
+        <Route path="/admin-dashboard" element={<AdminDashboardPage />} />
+        <Route path="/admission-system" element={<AdmissionSystemPage />} />
+        <Route path="/real-time-chat" element={<RealTimeChatPage />} />
+        <Route path="/notification-system" element={<NotificationSystemPage />} />
         <Route path="/feature/:slug" element={<ThemedPage />} />
       </Routes>
     </>

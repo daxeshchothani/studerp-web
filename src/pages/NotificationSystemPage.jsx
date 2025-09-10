@@ -5,13 +5,13 @@ import SpotlightCard from '../components/SpotlightCard';
 import { FEATURES } from '../constants/features';
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const AnalyticsReportsPage = () => {
-  const feature = FEATURES.find(f => f.id === 'analytics-reports');
+const NotificationSystemPage = () => {
+  const feature = FEATURES.find(f => f.id === 'notification-system');
   
   usePageMeta(
     feature.title,
     feature.description,
-    'analytics, reports, education analytics, student performance, data insights'
+    'notification system, real-time notifications, email SMS, push notifications, alert system'
   );
 
   return (
@@ -81,4 +81,4 @@ const AnalyticsReportsPage = () => {
   );
 };
 
-export default AnalyticsReportsPage;
+export default NotificationSystemPage;

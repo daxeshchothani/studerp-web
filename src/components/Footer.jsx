@@ -111,11 +111,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
+          <div className="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-white/60">
             <p>© {new Date().getFullYear()} STUEDU. All rights reserved.</p>
-            <p className="text-white/50">
-              Built with a modern, glassy UI theme.
-            </p>
+          
           </div>
         </div>
       </footer>

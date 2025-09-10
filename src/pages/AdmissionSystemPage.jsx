@@ -5,13 +5,13 @@ import SpotlightCard from '../components/SpotlightCard';
 import { FEATURES } from '../constants/features';
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const AnalyticsReportsPage = () => {
-  const feature = FEATURES.find(f => f.id === 'analytics-reports');
+const AdmissionSystemPage = () => {
+  const feature = FEATURES.find(f => f.id === 'admission-system');
   
   usePageMeta(
     feature.title,
     feature.description,
-    'analytics, reports, education analytics, student performance, data insights'
+    'admission system, public application, OTP authentication, application tracking, college admission'
   );
 
   return (
@@ -69,16 +69,17 @@ const AnalyticsReportsPage = () => {
               </div>
             </div>
           </SpotlightCard>
-
+<div>
           <SpotlightCard className='p-6 md:p-8'>
             <h3 className='text-lg font-semibold mb-3'>Get a demo</h3>
             <p className='text-white/70 mb-4'>See how this feature fits your workflow.</p>
             <Link to='/#contact' className='btn inline-block'>Request demo</Link>
           </SpotlightCard>
+          </div>
         </div>
       </section>
     </PageLayout>
   );
 };
 
-export default AnalyticsReportsPage;
+export default AdmissionSystemPage;

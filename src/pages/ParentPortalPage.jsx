@@ -27,7 +27,10 @@ const ParentPortalPage = () => {
               <div className='w-12 h-12 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center'>
                 <i className={`bx ${feature.icon} text-2xl text-white`}></i>
               </div>
-              <h1 className='text-2xl md:text-3xl font-semibold'>{feature.title}</h1>
+              <div>
+                <h1 className='text-2xl md:text-3xl font-semibold'>{feature.title}</h1>
+                <span className='text-sm text-white/60 bg-white/10 px-2 py-1 rounded'>{feature.category}</span>
+              </div>
             </div>
             <p className='text-white/70 leading-relaxed'>{feature.description}</p>
 
