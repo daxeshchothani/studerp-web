@@ -51,6 +51,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // On mobile (menu open), don't auto-close the features panel via outside clicks
+      if (isOpen) return;
       if (isFeaturesOpen && !event.target.closest('.features-dropdown')) {
         setIsFeaturesOpen(false);
       }
@@ -127,7 +129,7 @@ const Header = () => {
             </button>
             {isFeaturesOpen && (
               <div 
-                className="absolute top-full left-0 mt-2 w-[34rem] md:w-[40rem] max-h-96 overflow-y-auto bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg shadow-2xl z-50 features-dropdown"
+                className="absolute top-full left-0 mt-2 w-[90vw] sm:w-[34rem] md:w-[40rem] max-h-96 overflow-y-auto bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg shadow-2xl z-50 features-dropdown transition-all duration-200 ease-out origin-top transform opacity-100 translate-y-0"
                 role="menu"
                 aria-label="Features"
                 onMouseEnter={() => {
@@ -158,7 +160,7 @@ const Header = () => {
                                   key={feature.id}
                                   to={`/${feature.slug}`}
                                   role="menuitem"
-                                  className="flex items-center gap-3 p-2.5 rounded-md hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition-colors duration-200"
+                                  className="flex items-center gap-3 p-3 rounded-md hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition-colors duration-150"
                                   onClick={() => {
                                     clearTimers();
                                     setIsFeaturesOpen(false);
@@ -210,7 +212,7 @@ const Header = () => {
 
       <div
         id="mobileMenu"
-        className={`${isOpen ? "block" : "hidden"} z-40 fixed inset-0 h-full w-full md:hidden bg-black/90 backdrop-blur-sm`}
+        className={`${isOpen ? "block" : "hidden"} z-40 fixed inset-0 h-full w-full md:hidden bg-black/90 backdrop-blur-sm overflow-y-auto`}
         onClick={closeMenu}
       >
         <nav className="h-full w-full flex flex-col px-8 pt-12" onClick={(e) => e.stopPropagation()}>
@@ -229,7 +231,7 @@ const Header = () => {
                 <i className={`bx ${isFeaturesOpen ? 'bx-chevron-up' : 'bx-chevron-down'} text-lg`}></i>
               </button>
               {isFeaturesOpen && (
-                <div className="mt-4 ml-4 space-y-3">
+                <div className="mt-4 ml-4 space-y-3 max-h-[60vh] overflow-y-auto pr-2">
                   {Object.entries(
                     FEATURES.reduce((acc, feature) => {
                       const category = feature.category || 'Other';
@@ -247,7 +249,7 @@ const Header = () => {
                           <Link
                             key={feature.id}
                             to={`/${feature.slug}`}
-                            className="flex items-center gap-3 p-2 rounded-lg hover:bg:white/10 transition-colors duration-200 text-lg"
+                            className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-lg"
                             onClick={() => {
                               closeMenu();
                               setIsFeaturesOpen(false);
