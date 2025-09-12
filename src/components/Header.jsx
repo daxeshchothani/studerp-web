@@ -104,9 +104,9 @@ const Header = () => {
       {/* Navigation */}
       <nav className="md:flex w-full items-center justify-between  ">
         <div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
-            STUEDU
-          </h1>
+          <Link to="/" className="text-3xl md:text-4xl lg:text-5xl font-light m-0 block">
+            STUDERP
+          </Link>
         </div>
         <ul className="hidden md:flex gap-6 text-lg lg:text-xl items-center">
           <li>
@@ -166,8 +166,12 @@ const Header = () => {
                                     setIsFeaturesOpen(false);
                                   }}
                                 >
-                                  <div className={`w-8 h-8 rounded-lg ${feature.gradient} flex items-center justify-center`}>
-                                    <i className={`bx ${feature.icon} text-sm text-white`}></i>
+                                  <div className={`w-9 h-9 rounded-lg ${feature.gradient} flex items-center justify-center`}>
+                                    {feature.slug === 'admission-system' ? (
+                                      <span className="text-base">📥</span>
+                                    ) : (
+                                      <i className={`bx ${feature.icon} text-base text-white`}></i>
+                                    )}
                                   </div>
                                   <div>
                                     <p className="text-white font-medium text-sm">{feature.title}</p>
@@ -255,8 +259,12 @@ const Header = () => {
                               setIsFeaturesOpen(false);
                             }}
                           >
-                            <div className={`w-6 h-6 rounded-lg ${feature.gradient} flex items-center justify-center`}>
-                              <i className={`bx ${feature.icon} text-sm text-white`}></i>
+                            <div className={`w-8 h-8 rounded-lg ${feature.gradient} flex items-center justify-center`}>
+                              {feature.slug === 'admission-system' ? (
+                                <span className="text-base">📥</span>
+                              ) : (
+                                <i className={`bx ${feature.icon} text-base text-white`}></i>
+                              )}
                             </div>
                             <div>
                               <p className="text-white font-medium">{feature.title}</p>

@@ -8,7 +8,9 @@ import { FEATURES } from "../constants/features";
 const Freature = () => {
   const features = FEATURES.map(feature => ({
     ...feature,
-    icon: <i className={`bx ${feature.icon} text-2xl text-white`}></i>,
+    icon: feature.slug === 'admission-system'
+      ? <span className="text-2xl">📥</span>
+      : <i className={`bx ${feature.icon} text-2xl text-white`}></i>,
   }));
 
   // Group features by category

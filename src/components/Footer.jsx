@@ -10,7 +10,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             {/* Brand + Blurb */}
             <div className="md:col-span-5">
-              <h3 className="text-2xl font-semibold tracking-wide">STUEDU</h3>
+              <Link to="/" className="text-2xl font-semibold tracking-wide block">
+                STUDERP
+              </Link>
               <p className="text-white/60 mt-3 leading-relaxed">
                 Simplify student, course, attendance, and grade management with
                 a secure, modern platform designed for schools, colleges, and
@@ -49,20 +51,21 @@ const Footer = () => {
                 </p>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#home" className="nav-a-link">
+                    <a href="/" className="nav-a-link">
                       Home
                     </a>
                   </li>
                   <li>
-                    <a href="#about" className="nav-a-link">
+                    <a href="/#Features-Section" className="nav-a-link">
                       Features
                     </a>
                   </li>
                   <li>
-                    <a href="#contact" className="nav-a-link">
+                    <a href="/#Why-Us" className="nav-a-link">
                       Why Us
                     </a>
                   </li>
+                 
                 </ul>
               </div>
               <div>
@@ -71,7 +74,7 @@ const Footer = () => {
                 </p>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#services" className="nav-a-link">
+                    <a href="/#Contact-Section" className="nav-a-link">
                       Contact
                     </a>
                   </li>
@@ -113,7 +116,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-white/60">
-            <p>© {new Date().getFullYear()} STUEDU. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} STUDERP. All rights reserved.</p>
           
           </div>
         </div>
