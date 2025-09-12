@@ -5,6 +5,7 @@ import Freature from '../components/Freature';
 import WhyUs from '../components/WhyUs';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import TeamName from '../components/TeamName';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 const HomePage = () => {
@@ -23,6 +24,7 @@ const HomePage = () => {
       <WhyUs />
       <Contact />
       <Footer />
+      <TeamName />
     </main>
   );
 };

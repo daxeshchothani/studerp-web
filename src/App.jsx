@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
@@ -16,14 +15,13 @@ import RealTimeChatPage from './pages/RealTimeChatPage';
 import NotificationSystemPage from './pages/NotificationSystemPage';
 import HostelManagementPage from './pages/HostelManagementPage';
 import ThemedPage from './components/ThemedPage';
+import Lenis from 'lenis';
 
 export default function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 1500, // Animation duration in milliseconds
-      easing: 'ease-in-out', // Easing function for the animations
-      once: true, // Whether animation should happen only once - while scrolling down
-    });
+  const lenis = new Lenis({
+  autoRaf: true,
+});
   }, []);
 
   return (

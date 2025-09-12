@@ -29,10 +29,10 @@ const Freature = () => {
             " Features Of Student Management Software",
             "Features Of College Management Software"
           ]}
-          velocity={120} // adjust scroll speed
+          velocity={100} // adjust scroll speed
           className="text-4xl md:text-5xl  lg:text-[5rem] font-semibold tighting-wide mb-3"
         />
-        <p className="text-center text-base md:text-lg lg:text-xl font-light tighting-wide">
+        <p className="text-center max-w-7xl text-base md:text-lg lg:text-xl font-light tighting-wide">
           Our comprehensive Student Management System includes core modules, admission system, 
           and communication tools designed to streamline academic operations for schools, colleges, and universities.
         </p>
