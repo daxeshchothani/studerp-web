@@ -5,6 +5,7 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Always reset scroll to top when route changes
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [pathname]);
 
@@ -12,3 +13,5 @@ const ScrollToTop = () => {
 };
 
 export default ScrollToTop;
+
+

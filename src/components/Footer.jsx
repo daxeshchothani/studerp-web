@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SpotlightCard from "./SpotlightCard";
 
 const Footer = () => {
@@ -75,14 +76,14 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/privacy" className="nav-a-link">
                       Privacy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/terms" className="nav-a-link">
                       Terms
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -92,19 +93,19 @@ const Footer = () => {
                 </p>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/docs" className="nav-a-link">
                       Docs
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/support" className="nav-a-link">
                       Support
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/status" className="nav-a-link">
                       Status
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

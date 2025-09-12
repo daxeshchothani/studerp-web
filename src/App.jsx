@@ -17,6 +17,11 @@ import NotificationSystemPage from './pages/NotificationSystemPage';
 import HostelManagementPage from './pages/HostelManagementPage';
 import ThemedPage from './components/ThemedPage';
 import ScrollToTop from './components/ScrollToTop';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
+import DocsPage from './pages/DocsPage';
+import SupportPage from './pages/SupportPage';
+import StatusPage from './pages/StatusPage';
 
 export default function App() {
   useEffect(() => {
@@ -45,6 +50,11 @@ export default function App() {
         <Route path="/notification-system" element={<NotificationSystemPage />} />
         <Route path="/hostel-management" element={<HostelManagementPage />} />
         <Route path="/feature/:slug" element={<ThemedPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/docs" element={<DocsPage />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="/status" element={<StatusPage />} />
       </Routes>
     </>
   )
