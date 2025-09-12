@@ -16,6 +16,7 @@ import RealTimeChatPage from './pages/RealTimeChatPage';
 import NotificationSystemPage from './pages/NotificationSystemPage';
 import HostelManagementPage from './pages/HostelManagementPage';
 import ThemedPage from './components/ThemedPage';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/student-management" element={<StudentManagementPage />} />
