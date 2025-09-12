@@ -26,8 +26,8 @@ const Freature = () => {
       <div className="feature-text flex flex-col items-stretch justify-stretch sm:items-center sm:justify-center space-y-6">
         <ScrollVelocity
           texts={[
-            "🚀 Features Of Student Management Software",
-            "🚀 Features Of Student Management Software"
+            " Features Of Student Management Software",
+            "Features Of College Management Software"
           ]}
           velocity={120} // adjust scroll speed
           className="text-4xl md:text-5xl  lg:text-[5rem] font-semibold tighting-wide mb-3"

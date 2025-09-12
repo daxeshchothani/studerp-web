@@ -19,7 +19,7 @@ const Contact = () => {
                 id="name"
                 name="name"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Dev Patel"
                 className="w-full rounded-lg bg-white/10 border border-white/20 px-4 py-3 text-white placeholder-white/50 outline-none focus:border-white/40 focus:ring-0"
                 required
               />

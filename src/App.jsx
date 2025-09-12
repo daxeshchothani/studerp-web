@@ -14,6 +14,7 @@ import AdminDashboardPage from './pages/AdminDashboardPage';
 import AdmissionSystemPage from './pages/AdmissionSystemPage';
 import RealTimeChatPage from './pages/RealTimeChatPage';
 import NotificationSystemPage from './pages/NotificationSystemPage';
+import HostelManagementPage from './pages/HostelManagementPage';
 import ThemedPage from './components/ThemedPage';
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/admission-system" element={<AdmissionSystemPage />} />
         <Route path="/real-time-chat" element={<RealTimeChatPage />} />
         <Route path="/notification-system" element={<NotificationSystemPage />} />
+        <Route path="/hostel-management" element={<HostelManagementPage />} />
         <Route path="/feature/:slug" element={<ThemedPage />} />
       </Routes>
     </>

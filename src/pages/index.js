@@ -10,3 +10,4 @@ export { default as AdminDashboardPage } from './AdminDashboardPage';
 export { default as AdmissionSystemPage } from './AdmissionSystemPage';
 export { default as RealTimeChatPage } from './RealTimeChatPage';
 export { default as NotificationSystemPage } from './NotificationSystemPage';
+export { default as HostelManagementPage } from './HostelManagementPage';
