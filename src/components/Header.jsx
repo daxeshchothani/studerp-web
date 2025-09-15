@@ -103,18 +103,18 @@ const Header = () => {
       <nav className="md:flex w-full items-center justify-between  ">
         <div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
-            STUEDU
+            STUERP
           </h1>
         </div>
         <ul className="hidden md:flex gap-6 text-lg lg:text-xl items-center">
           <li>
-            <a href="#app.jsx" className="nav-a-link" onClick={handleAnchorClick}>
+            <a  className="nav-a-link cursor-pointer"  onClick={handleAnchorClick}>
               Home
             </a>
           </li>
-          <li className="relative group features-dropdown">
+          <li className="relative group cursor-pointer features-dropdown">
             <button 
-              className="nav-a-link flex items-center gap-1"
+              className="nav-a-link flex items-center gap-1 cursor-pointer"
               onMouseEnter={() => openFeaturesWithDelay()}
               onMouseLeave={() => closeFeaturesWithDelay()}
               onClick={() => setIsFeaturesOpen((prev) => !prev)}
@@ -127,7 +127,7 @@ const Header = () => {
             </button>
             {isFeaturesOpen && (
               <div 
-                className="absolute top-full left-0 mt-2 w-[34rem] md:w-[40rem] max-h-96 overflow-y-auto bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg shadow-2xl z-50 features-dropdown"
+                className="absolute  top-full left-0 mt-2 w-[34rem] md:w-[40rem] max-h-96 overflow-y-auto bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg shadow-2xl z-50 features-dropdown"
                 role="menu"
                 aria-label="Features"
                 onMouseEnter={() => {
@@ -165,7 +165,7 @@ const Header = () => {
                                   }}
                                 >
                                   <div className={`w-8 h-8 rounded-lg ${feature.gradient} flex items-center justify-center`}>
-                                    <i className={`bx ${feature.icon} text-sm text-white`}></i>
+                                    <i className={`bx ${feature.icon} text-sm px-2 text-white`}></i>
                                   </div>
                                   <div>
                                     <p className="text-white font-medium text-sm">{feature.title}</p>

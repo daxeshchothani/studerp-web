@@ -25,7 +25,6 @@ src/
 │   ├── StudentManagementPage.jsx
 │   ├── AttendanceTrackingPage.jsx
 │   ├── GradeManagementPage.jsx
-│   ├── ParentPortalPage.jsx
 │   ├── CourseManagementPage.jsx
 │   ├── AnalyticsReportsPage.jsx
 │   └── index.js         # Page exports
@@ -77,7 +76,6 @@ src/
 | `/student-management` | StudentManagementPage | Student management feature details |
 | `/attendance-tracking` | AttendanceTrackingPage | Attendance tracking feature details |
 | `/grade-management` | GradeManagementPage | Grade management feature details |
-| `/parent-portal` | ParentPortalPage | Parent portal feature details |
 | `/course-management` | CourseManagementPage | Course management feature details |
 | `/analytics-reports` | AnalyticsReportsPage | Analytics and reports feature details |
 | `/feature/:slug` | ThemedPage | Dynamic feature page (legacy support) |

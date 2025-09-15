@@ -5,7 +5,7 @@ const TeamName = () => {
   return (
     <div className="relative h-fit px-[3rem] py-[2rem] md:p-4">
       <TextPressure
-        text="Jai shree ram"
+        text="VidyaVerse"
         flex={true}
         alpha={false}
         stroke={false}

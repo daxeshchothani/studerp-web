@@ -54,7 +54,7 @@ const SpotlightCard = ({ children, className = "" }) => {
   return (
     <div
       ref={divRef}
-      className={`relative h-full w-full rounded-xl border border-white/20 bg-black/50 backdrop-blur-sm p-8 hover:bg-black/70 transition-all duration-300 ${className}`}
+      className={`relative h-full w-full rounded-xl border border-white/20 bg-black/50 backdrop-blur-sm p-8 hover:bg-black/70 transition-all duration-300 overflow-hidden ${className}`}
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"

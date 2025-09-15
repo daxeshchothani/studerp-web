@@ -57,20 +57,6 @@ const contentBySlug = {
       'Publish progress reports',
     ],
   },
-  'parent-portal': {
-    title: 'Parent Portal',
-    description: 'Secure portal for parents to view progress, attendance, and communicate with teachers.',
-    icon: <i className="bx bx-shield text-2xl text-white"></i>,
-    benefits: [
-      'Single login for multiple children',
-      'Real-time notifications and messaging',
-      'Payments and permissions (optional add-ons)',
-    ],
-    capabilities: [
-      'Announcements and calendars',
-      'Downloadable reports and certificates',
-    ],
-  },
   'course-management': {
     title: 'Course Management',
     description: 'Organize courses, subjects, timetables, and curriculum with flexible scheduling.',

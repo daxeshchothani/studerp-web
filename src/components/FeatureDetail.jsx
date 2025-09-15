@@ -4,6 +4,10 @@ import SpotlightCard from './SpotlightCard';
 import { FEATURES } from '../constants/features';
 import { usePageMeta } from '../hooks/usePageMeta';
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 const defaultIntegrations = [
   { name: 'Google Workspace', icon: 'bx-google' },
   { name: 'Microsoft 365', icon: 'bx-microsoft' },
@@ -56,7 +60,7 @@ const FeatureDetail = ({
   return (
     <section className='container mx-auto px-4 lg:px-16 mt-[6rem] mb-[4rem]'>
       <div className='max-w-7xl'>
-        <Link to='/' className='nav-a-link'>&larr; Back to home</Link>
+        <Link to='/' className='nav-a-link' onClick={scrollToTop}>&larr; Back to home</Link>
       </div>
 
       {/* Hero */}
@@ -71,7 +75,7 @@ const FeatureDetail = ({
             </div>
           </div>
           <div>
-            <h1 className={`text-4xl md:text-5xl font-bold bg-gradient-to-r from-white ${heroGradient.headingTo} bg-clip-text text-transparent`}>
+            <h1 className={`text-4xl py-2 md:text-5xl font-bold bg-gradient-to-r from-white ${heroGradient.headingTo} bg-clip-text text-transparent`}>
               {feature.title}
             </h1>
             <span className={`text-sm ${heroGradient.badgeText} ${heroGradient.badgeBg} px-3 py-1 rounded-full ${heroGradient.badgeBorder} border`}>
@@ -268,7 +272,7 @@ const FeatureDetail = ({
               Get Started
             </h3>
             <p className='text-white/70 mb-4'>Experience the power of {feature.title}.</p>
-            <Link to='/#contact' className='btn w-full text-center block'>Request Demo</Link>
+            <Link to='/#Contact-Section' className='btn w-full text-center block' onClick={scrollToTop}>Request Demo</Link>
           </SpotlightCard></div>
 
           <div><SpotlightCard className='p-6'>

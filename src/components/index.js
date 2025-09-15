@@ -12,3 +12,4 @@ export { default as SpotlightCard } from './SpotlightCard';
 export { default as ScrollVelocity } from './ScrollVelocity';
 export { default as ShinyText } from './ShinyText';
 export { default as ThemedPage } from './ThemedPage';
+export { default as GoToTop } from './GoToTop';

@@ -1,5 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SpotlightCard from "./SpotlightCard";
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const scrollToSection = (sectionId) => {
+  const targetId = sectionId.startsWith('#') ? sectionId : `#${sectionId}`;
+  const target = document.querySelector(targetId);
+  const headerEl = document.querySelector('header');
+  const headerHeight = headerEl ? headerEl.offsetHeight : 0;
+
+  if (target) {
+    const rect = target.getBoundingClientRect();
+    const y = window.scrollY + rect.top - headerHeight - 8;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
+
+const handleAnchorClick = (e, sectionId) => {
+  e.preventDefault();
+  scrollToSection(sectionId);
+};
 
 const Footer = () => {
   return (
@@ -9,7 +32,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
             {/* Brand + Blurb */}
             <div className="md:col-span-5">
-              <h3 className="text-2xl font-semibold tracking-wide">STUEDU</h3>
+              <h3 className="text-2xl font-semibold tracking-wide">STUERP</h3>
               <p className="text-white/60 mt-3 leading-relaxed">
                 Simplify student, course, attendance, and grade management with
                 a secure, modern platform designed for schools, colleges, and
@@ -17,21 +40,27 @@ const Footer = () => {
               </p>
               <div className="mt-5 flex items-center gap-3">
                 <a
-                  href="#"
+                  href="https://twitter.com/stuedu"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Twitter"
                   className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
                 >
                   <i className="bx bxl-twitter text-xl"></i>
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/company/stuedu"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
                 >
                   <i className="bx bxl-linkedin text-xl"></i>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/stuedu"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="GitHub"
                   className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
                 >
@@ -48,17 +77,25 @@ const Footer = () => {
                 </p>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#home" className="nav-a-link">
+                    <Link to="/" className="nav-a-link" onClick={scrollToTop}>
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#about" className="nav-a-link">
+                    <a 
+                      href="#Features-Section" 
+                      className="nav-a-link"
+                      onClick={(e) => handleAnchorClick(e, 'Features-Section')}
+                    >
                       Features
                     </a>
                   </li>
                   <li>
-                    <a href="#contact" className="nav-a-link">
+                    <a 
+                      href="#Why-Us" 
+                      className="nav-a-link"
+                      onClick={(e) => handleAnchorClick(e, 'Why-Us')}
+                    >
                       Why Us
                     </a>
                   </li>
@@ -70,19 +107,23 @@ const Footer = () => {
                 </p>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#services" className="nav-a-link">
+                    <a 
+                      href="#Contact-Section" 
+                      className="nav-a-link"
+                      onClick={(e) => handleAnchorClick(e, 'Contact-Section')}
+                    >
                       Contact
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/privacy" className="nav-a-link" onClick={scrollToTop}>
                       Privacy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/terms" className="nav-a-link" onClick={scrollToTop}>
                       Terms
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -92,19 +133,19 @@ const Footer = () => {
                 </p>
                 <ul className="space-y-2">
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/docs" className="nav-a-link" onClick={scrollToTop}>
                       Docs
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/support" className="nav-a-link" onClick={scrollToTop}>
                       Support
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="nav-a-link">
+                    <Link to="/status" className="nav-a-link" onClick={scrollToTop}>
                       Status
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -112,7 +153,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-white/60">
-            <p>© {new Date().getFullYear()} STUEDU. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} STUERP. All rights reserved.</p>
           
           </div>
         </div>

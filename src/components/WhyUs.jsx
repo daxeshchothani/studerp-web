@@ -9,7 +9,7 @@ const WhyUs = () => {
   }));
   
   return (
-    <section id='Why-Us' className='why-us mt-[8rem] my-[6rem] container mx-auto px-4 lg:px-16 flex flex-col justify-center items-center gap-12 text-center'>
+    <section id='Why-Us' className='why-us mt-[5rem] my-[6rem] container mx-auto px-4 md:mt-[12rem] lg:px-16 flex flex-col justify-center items-center gap-12 text-center'>
       <div className='cursor-text'>
         <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
           <span id='WhyHover' className='peer blur-lg hover:blur-none transition-all duration-300'>Why</span>{" "}
