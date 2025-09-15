@@ -102,15 +102,17 @@ const Header = () => {
       {/* Navigation */}
       <nav className="md:flex w-full items-center justify-between  ">
         <div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
-            STUERP
-          </h1>
+          <Link to="/" className="inline-block" onClick={closeMenu}>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
+              STUERP
+            </h1>
+          </Link>
         </div>
         <ul className="hidden md:flex gap-6 text-lg lg:text-xl items-center">
           <li>
-            <a  className="nav-a-link cursor-pointer"  onClick={handleAnchorClick}>
+            <Link to="/" className="nav-a-link cursor-pointer" onClick={closeMenu}>
               Home
-            </a>
+            </Link>
           </li>
           <li className="relative group cursor-pointer features-dropdown">
             <button 
@@ -216,9 +218,9 @@ const Header = () => {
         <nav className="h-full w-full flex flex-col px-8 pt-12" onClick={(e) => e.stopPropagation()}>
           <ul className="flex flex-col items-start justify-center gap-4 text-2xl">
             <li>
-              <a href="#app.jsx" className="nav-a-link" onClick={handleAnchorClick}>
+              <Link to="/" className="nav-a-link" onClick={closeMenu}>
                 Home
-              </a>
+              </Link>
             </li>
             <li className="w-full features-dropdown">
               <button 
